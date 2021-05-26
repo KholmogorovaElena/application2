@@ -5,77 +5,81 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/add"
-    tools:context=".AddUserActivity">
+    >
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="377dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:text="Новый контакт"
+        android:id="@+id/textViewUpdateForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Редактирование"
+        android:textAlignment="center"
         android:textColor="#157361"
-        android:textSize="34sp"
+        android:textSize="26sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextName"
+        android:id="@+id/editUpdateName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#0CE39F"
+        android:backgroundTint="#236E56"
         android:ems="10"
         android:hint="Имя"
         android:inputType="textPersonName"
-        android:textColorHint="#0D977B"
+        android:textColorHint="#2E756A"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUpdateForm" />
 
     <EditText
-        android:id="@+id/editTextLastName"
+        android:id="@+id/editUpdateLastName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#0CE39F"
+        android:backgroundTint="#236E56"
         android:ems="10"
         android:hint="Фамилия"
         android:inputType="textPersonName"
-        android:textColorHint="#0D977B"
+        android:textColorHint="#2E756A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+        app:layout_constraintTop_toBottomOf="@+id/editUpdateName" />
 
     <EditText
-        android:id="@+id/editTextPhone"
+        android:id="@+id/editUpdatePhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#0CE39F"
+        android:backgroundTint="#236E56"
         android:ems="10"
-        android:hint="Телефон"
+        android:hint="Номер телефона"
         android:inputType="textPersonName"
-        android:textColorHint="#0D977B"
+        android:textColorHint="#2E756A"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLastName"
+        app:layout_constraintTop_toBottomOf="@+id/editUpdateLastName"
         tools:ignore="TextFields" />
 
     <Button
-        android:id="@+id/insertUserBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#55B8B6"
+        android:id="@+id/updateBtn"
+        android:layout_width="412dp"
+        android:layout_height="50dp"
+        android:background="#358774"
         android:text="Сохранить"
-        android:textColor="#FFFFFF"
+        android:textColor="#11422D"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
-        app:layout_constraintVertical_bias="0.992" />
+        app:layout_constraintTop_toBottomOf="@+id/editUpdatePhone"
+        app:layout_constraintVertical_bias="0.983" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,7 @@ public class Users {
     private static Users users;
     private SQLiteDatabase database;
     private Context context;
-    private List<String> userList;
+    private List<User> userList;
 
     public static Users get(Context context){
         if (users == null){
@@ -35,7 +35,16 @@ public class Users {
         ContentValues values = getContentValues(user);
         database.insert(UserDbSchema.UserTable.NAME,null,values);
     }
+ public void redactorUser(User user){
+     ContentValues values = getContentValues(user);
+     String where = String.format("%s = '%s'", UserDbSchema.UserTable.Cols.UUID, user.getUuid().toString());
+     database.update(UserDbSchema.UserTable.NAME, values,  where, null);
 
+ }
+ public void deleteUser (String uuid) {
+     String where = String.format("%s = '%s'", UserDbSchema.UserTable.Cols.UUID, uuid);
+     database.delete(UserDbSchema.UserTable.NAME, where, null);
+ }
     private static ContentValues getContentValues(User user){
         ContentValues values = new ContentValues();
         values.put(UserDbSchema.UserTable.Cols.UUID, user.getUuid().toString());
@@ -50,14 +59,14 @@ public class Users {
         return new UserCursorWrapper(cursor);
     }
 
-    public List<String> getUserList(){
-        userList = new ArrayList<>();
+    public List<User> getUserList(){
+        userList = new ArrayList<User>();
         UserCursorWrapper cursorWrapper = queryUsers();
         try{
             cursorWrapper.moveToFirst();
             while (!cursorWrapper.isAfterLast()){
                 User user = cursorWrapper.getUser();
-                userList.add(user.getUserName()+" "+user.getUserLastName());
+                userList.add(user);
                 cursorWrapper.moveToNext();
             }
         }finally {

@@ -9,9 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ApplicationSecond">
-        <activity android:name=".AddUserActivity"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".RedactorUserFragment" />
+        <activity android:name=".RedactorUserActivity" />
+        <activity android:name=".UserPagerActivity" />
+        <activity android:name=".UserListFragment" />
+        <activity android:name=".UserFragment" />
+        <activity android:name=".UserActivity" />
+        <activity android:name=".SingleFragmentActivity" />
+        <activity android:name=".AddUserActivity" />
         <activity android:name=".Item" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

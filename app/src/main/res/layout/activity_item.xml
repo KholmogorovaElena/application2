@@ -9,11 +9,12 @@
     tools:context=".Item">
     <!-- ViewHolder будет записывать сюда информацию -->
     <TextView
+        android:id="@+id/itemTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#0533B8"
         android:textSize="24sp"
-        android:id="@+id/itemTextView"
-        />
+        android:textStyle="bold" />
 
 
 </LinearLayout>

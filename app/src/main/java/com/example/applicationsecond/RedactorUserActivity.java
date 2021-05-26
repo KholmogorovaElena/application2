@@ -1,0 +1,10 @@
+package com.example.applicationsecond;
+import androidx.fragment.app.Fragment;
+
+public class RedactorUserActivity extends SingleFragmentActivity {
+@Override
+protected Fragment createFragment() {
+    Fragment fragment = new RedactorUserFragment();
+  return fragment;
+   }
+ }
